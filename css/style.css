@@ -1,20 +1,168 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: "Margareth";
+  src: url("../assests/font/margareth-rosinante-demo/MargarethRosinante-Regular.otf")
+      format("otf"),
+    url("../assests/font/margareth-rosinante-demo/MargarethRosinante-Regular.ttf")
+      format("ttf"),
+    url("../assests/font/margareth-rosinante-demo/MargarethRosinante-Regular.woff")
+      format("woff"),
+    url("../assests/font/margareth-rosinante-demo/MargarethRosinante-Regular.woff2")
+      format("woff2");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-section{
-    height: 100vh;
-    width: 100vw;
-    flex-shrink: 0;
+body {
+  font-family: "Margareth";
+  overflow-x: hidden;
 }
-.section-1{
-    background-color: antiquewhite;
+
+section {
+  height: 100vh;
+  width: 100vw;
+  flex-shrink: 0;
 }
-.section-2{
-    background-color: aqua;
+.section-1 {
+  display: flex;
 }
-.main-wrapper{
-    display: flex;
+.section-2 {
+  transform: translate(5%);
+  /* font-size: 100px; */
+}
+.main-wrapper {
+  display: flex;
+}
+.section-3 {
+  background-color: black;
+  margin-top: -100vh;
+  position: relative;
+}
+.box-1 {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  font-size: 150px;
+}
+.box-2 {
+  width: 35%;
+}
+.image-gallery {
+  display: flex;
+  height: 100vh;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  min-height: 300px;
+  height: auto;
+  width: 200px;
+  object-fit: cover;
+  background-color: black;
+}
+.col-1 > img,
+.col-3 img {
+  padding: 0.2rem 0.5rem;
+}
+.col-2 img {
+  padding: 0.2rem 0;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.left {
+  width: 65%;
+  padding: 0 0.8rem;
+  padding-left: 0;
+  padding-bottom: 0.5rem;
+}
+.left img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.line-1 > p,
+.line-2 > p {
+  font-size: 65px;
+}
+.line-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.line-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.num {
+  text-align: left;
+  width: 100%;
+}
+.loop {
+  width: 120px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: none;
+  border: solid 1px #444;
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  cursor: pointer;
+}
+.loop span {
+  animation: loop 10s linear infinite;
+  display: inline-block;
+  padding-left: 110%;
+}
+.loop2 span {
+  animation-delay: 5s;
+}
+
+@keyframes loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.right {
+  width: 35%;
+}
+.animate-text {
+  height: 120px;
+  font-size: 100px;
+  background-color: black;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.animate-text span {
+  animation: loop 10s linear infinite;
+  display: inline-block;
+}
+.img-container{
+  width: 100%;
+  height: 780px;
+  padding: .5rem;
+  background-color: black;
+}
+.img-container img {
+  width: 100%;
+  object-fit: cover;
 }
