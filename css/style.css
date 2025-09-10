@@ -193,6 +193,7 @@ img {
 .row li {
   font-size: 220px;
   animation: loop 10s linear infinite;
+  transform: translate(50%);
 }
 .side-bar{
   width: 65px;
